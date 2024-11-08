@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>seki</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekiro - PIXEL</title>
+    <style>
+        /* Resetando as margens e os preenchimentos de todos os elementos e definindo o box-sizing como border-box */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Definindo o estilo do menu de navegação */
+        .navbar {
+            display: flex; /* Usando o Flexbox para organizar os itens dentro da barra de navegação */
+            justify-content: space-between; /* Espaço entre os itens */
+            align-items: center; /* Alinha os itens verticalmente ao centro */
+            padding: 15px;
+        }
+
+        /* Definindo o estilo do corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Definindo a fonte para o corpo */
+            background-color: black; /* Cor de fundo preta */
+        }
+
+        /* Estilo para o cabeçalho fixo no topo da página */
+        header {
+            background-color: #ffcc00; /* Cor de fundo amarela */
+            position: fixed; /* Fixa o cabeçalho no topo */
+            width: 100%; /* Largura total */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        }
+
+        /* Estilo para a seção com o bloco de texto centralizado */
+        .bloco-texto {
+            border: 5px solid purple; /* Borda roxa */
+            background-color: #7d043b; /* Cor de fundo roxa escura */
+            padding: 15px;
+            border-radius: 8px; /* Bordas arredondadas */
+            margin: 20px auto; /* Centraliza a seção com margens automáticas */
+            width: 420px; /* Largura fixa */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        /* Estilo para as caixas de informações */
+        .box {
+            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo preta com opacidade */
+            color: white;
+            padding: -2px;
+            border-radius: 15px; /* Bordas arredondadas */
+            margin-bottom: 20px; /* Espaçamento inferior */
+            width: 420px; /* Largura fixa */
+            border: 10px solid #b4045c; /* Borda colorida */
+        }
+
+        /* Estilo das imagens dentro das caixas */
+        .box img {
+            width: 400px; /* Largura da imagem */
+            height: auto; /* Manter a proporção da imagem */
+            display: block; /* Faz a imagem ocupar uma linha inteira */
+            margin: 0 auto; /* Centraliza a imagem */
+        }
+
+        /* Estilo para o contêiner de vídeo */
+        .video-container {
+            display: flex;
+            flex-direction: column; /* Organiza os itens verticalmente */
+            align-items: center; /* Alinha os itens ao centro */
+            margin-top: -350px; /* Ajusta o espaço superior */
+            width: 100%; /* Largura total */
+        }
+
+        /* Estilo para a moldura da imagem */
+        #moldura {
+            width: 445px; /* Largura fixa da moldura */
+            display: flex;
+            flex-direction: column; /* Organiza os itens verticalmente */
+            align-items: flex-start; /* Alinha os itens à esquerda */
+            margin-top: 50px; /* Espaço superior */
+        }
+
+        /* Estilo para a moldura em si */
+        .moldura {
+            position: relative; /* Permite o uso de posicionamento absoluto para os filhos */
+            width: 455px; /* Largura da moldura */
+            height: 310px; /* Altura da moldura */
+            border: 5px solid purple; /* Borda roxa */
+            border-radius: 10px; /* Bordas arredondadas */
+            overflow: hidden; /* Oculta o conteúdo que ultrapassar a moldura */
+            margin-bottom: 10px; /* Espaçamento inferior */
+        }
+
+        /* Estilo para o botão de troca de imagem */
+        .btn-img {
+            height: 50px; 
+            padding: 0 20px; 
+            background-color: #7d043b; 
+            color: white; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background-color 0.3s; /* Transição suave de cor */
+        }
+
+        /* Estilo do botão quando o mouse passa sobre ele */
+        .btn-img:hover {
+            background-color: #9b0a47; /* Cor do botão ao passar o mouse */
+        }
+
+        /* Estilo das imagens dentro da moldura */
+        .moldura img {
+            width: 100%; /* A imagem ocupa toda a largura da moldura */
+            height: 300px; /* Altura fixa */
+            object-fit: cover; /* Ajuste da imagem para cobrir a área sem distorção */
+        }
+
+        /* Estilo da seção de herói (imagem de fundo e título) */
+        .hero {
+            background-image: url("imagens/katana.jpg"); /* Imagem de fundo */
+            padding: 100px 20px; /* Preenchimento interno */
+            background-size: cover; /* A imagem de fundo cobre toda a área */
+            background-position: 40% -125%; /* Ajuste da posição da imagem */
+        }
+
+        /* Estilo para a cor vermelha em alguns textos */
+        .vermelhod {
+            color: #8b0000; /* Cor vermelha escura */
+        }
+
+        /* Estilo para a cor branca em alguns textos */
+        .branco {
+            color: white; /* Cor branca */
+        }
+
+        /* Estilo para a seção de produtos */
+        .produtos {
+            padding: 80px 20px; /* Preenchimento da seção */
+        }
+
+        /* Estilo para o botão de voltar */
+        .btn-voltar {
+            display: inline-block; 
+            text-align: center;
+            padding: 15px 30px; 
+            background-color: #7d043b; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background-color 0.3s; 
+            margin-top: 20px; 
+        }
+
+        /* Estilo do botão de voltar quando o mouse passa sobre ele */
+        .btn-voltar:hover {
+            background-color: #9b0a47;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho com barra de navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo com link para a página inicial -->
+                <a href="home.html" style="text-decoration: none; color: inherit;">PI<span class="vermelhod">X</span>EL</a>
+            </div>
+            <ul class="nav-links">
+                <!-- Link para sair da conta -->
+                <a href="login.html" style="text-decoration: none; color: inherit;">Sair da conta</a>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Seção Hero com título e descrição -->
+    <main>
+        <section id="home" class="hero">
+            <h1 class="branco">Sekiro: Shadows Die Twice</h1>
+            <p class="branco">Shinobi busca resgatar mestre e vingar morte.</p>
+        </section>
+      
+        <!-- Botão de voltar para a página inicial -->
+        <a href="home.html" class="btn-voltar">Voltar</a>
+      
+        <section id="produtos" class="produtos">
+            <h2 class="branco">Sobre o jogo</h2>
+            <p class="branco">O jogo segue a história de um shinobi chamado Wolf...</p>
+            
+            <!-- Caixa de informações sobre o jogo -->
+            <section id="box">
+                <div class="box">
+                    <img src="imagens/seki.jpg" alt="Imagem da Moldura">
+                    <h3>Sekiro: Shadows Die Twice</h3>
+                    <p>Plataformas: PC, Playstation 4/5, Xbox S/X</p>
+                    <p>Data de Lançamento: 2019</p>
+                </div>
+            </section>
+          
+            <!-- Seção de vídeo (trailer do jogo) -->
+            <div class="video-container">
+                <h1 class="branco">Assista ao trailer do jogo</h1>
+                <iframe id="trailerIframe" width="445" height="250" 
+                        src="https://www.youtube.com/embed/UGPknmiLxGo?autoplay=1" 
+                        title="Sekiro Trailer"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Seção de moldura com imagens -->
+        <section id="moldura">
+            <h1 class="branco">Imagens do jogo:</h1>
+            <div class="moldura">
+                <img id="imagemMoldura" src="https://th.bing.com/th/id/OIP.b0AGIJbxB-AUVSYonEtcHgHaEK?rs=1&pid=ImgDetMain" alt="Imagem da Moldura">
+            </div>
+            <button id="trocarImagem" class="btn-img">➡</button>
+        </section>
+
+        <!-- Bloco de texto explicativo -->
+        <div class="bloco-texto">
+            <h2 class="branco">História do jogo:</h2>
+            <p class="branco">Wolf, um habilidoso shinobi que serve ao clã Hirata...</p>
+        </div>
+
+        <!-- Botão de navegação para o próximo texto -->
+        <button id="nextButton" class="btn-voltar">Next</button>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 PIXEL. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        /* Array com URLs das imagens da moldura */
+        const imagensMoldura = [
+            "https://th.bing.com/th/id/R.df487587beaf682d05d56f447bef7e31?rik=G%2biATroNZZmFQw&pid=ImgRaw&r=0",
+            "https://i.ytimg.com/vi/EP703GHjEUg/maxresdefault.jpg",
+            "https://th.bing.com/th/id/R.f7a51b38cd5fdf4b101c401e1efb365b?rik=ss295RqM8FCO7Q&pid=ImgRaw&r=0"
+        ];
+
+        /* Variável para controlar qual imagem está sendo exibida */
+        let imagemAtual = 0;
+
+        /* Evento para trocar a imagem ao clicar no botão */
+        document.getElementById('trocarImagem').addEventListener('click', () => {
+            imagemAtual = (imagemAtual + 1) % imagensMoldura.length; // Loop pelas imagens
+            document.getElementById('imagemMoldura').src = imagensMoldura[imagemAtual];
+        });
+
+        /* Array com os textos explicativos */
+        const texts = [
+            {
+                title: "História do jogo:",
+                content: "Wolf, um habilidoso shinobi que serve ao clã Hirata..."
+            },
+            {
+                title: "Personagens principais:",
+                content: "Wolf, Kuro, O Tengu, Lady Butterfly..."
+            },
+            {
+                title: "Empresa:",
+                content: "A FromSoftware é uma desenvolvedora de jogos japonesa..."
+            },
+        ];
+
+        let currentIndex = 0;
+
+        /* Evento para alterar os textos ao clicar no botão Next */
+        document.getElementById('nextButton').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % texts.length; // Loop pelos textos
+            document.querySelector('.bloco-texto h2').innerText = texts[currentIndex].title;
+            document.querySelector('.bloco-texto p').innerText = texts[currentIndex].content;
+
+            /* Mostrar o trailer se o índice for 0 */
+            if (currentIndex === 0) {
+                document.getElementById('trailerIframe').style.display = 'block';
+            } else {
+                document.getElementById('trailerIframe').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

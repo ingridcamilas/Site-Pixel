@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>God of war II</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>god of war II - PIXEL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        header {
+            background-color: #ffcc00;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .bloco-texto {
+            border: 5px solid purple;
+            background-color: #7d043b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto; /* Adiciona margem automática para centralizar */
+            width: 420px; /* Mantém a largura definida */
+            text-align: center; /* Centraliza o texto dentro do bloco */
+        }
+
+        .box {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: -2px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            width: 420px; /* Ajuste a largura conforme necessário */
+            border: 10px solid #b4045c; /* Adiciona a borda com a cor desejada */
+        }
+
+        .box img {
+            width: 400px; /* Ajusta a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            display: block; /* Faz a imagem ocupar uma linha inteira */
+            margin: 0 auto; /* Centraliza a imagem horizontalmente */
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            margin-top: -350px; 
+            width: 100%;
+        }
+
+        #moldura {
+            width: 445px; /* Ajuste a largura conforme necessário */
+            display: flex;
+            flex-direction: column; /* Coloca a moldura e o botão em coluna */
+            align-items: flex-start; /* Alinha os itens à esquerda */
+            margin-top: 50px; /* Espaço acima da moldura */
+        }
+
+        .moldura {
+            position: relative; /* Permite que elementos filhos sejam posicionados absolutamente */
+            width: 455px;
+            height: 310px;
+            border: 5px solid purple; /* Moldura roxa */
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px; /* Espaço abaixo da moldura */
+        }
+
+        .btn-img {
+            height: 50px; 
+            padding: 0 20px; 
+            background-color: #7d043b; 
+            color: white; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background-color 0.3s; 
+        }
+
+        .btn-img:hover {
+            background-color: #9b0a47; /* Cor do botão ao passar o mouse */
+        }
+
+        .moldura img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .hero {
+            background-image: url("imagens/katana.jpg");
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: 40% -125%;
+        }
+
+        .vermelhod {
+            color: #8b0000;
+        }
+
+        .branco {
+            color: white;
+        }
+
+        .produtos {
+            padding: 80px 20px;
+        }
+
+        .btn-voltar {
+            display: inline-block; 
+            text-align: center;
+            padding: 15px 30px; 
+            background-color: #7d043b; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background-color 0.3s; 
+            margin-top: 20px; 
+        }
+
+        .btn-voltar:hover {
+            background-color: #9b0a47;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            margin-top: -350px; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="home.html" style="text-decoration: none; color: inherit;">PI<span class="verde">X</span>EL</a>
+            </div>
+            <ul class="nav-links">
+                <a href="login.html"  style="text-decoration: none; color: inherit;">Sair da conta</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <h1 class="amarelo">God of War II</h1>
+            <p class="amarelo">A sequência épica da saga de Kratos</p>
+        </section>
+        
+        <a href="home.html" class="btn-voltar">Voltar</a>
+
+        <section id="produtos" class="produtos">
+            <h2 class="branco">Sobre o jogo</h2>
+            <p class="branco">God of War II continua a história de Kratos enquanto ele busca vingança contra os deuses do Olimpo.</p>
+
+            <section id="box">
+                <div class="box">
+                    <img src="https://th.bing.com/th/id/R.a9220d9067051bb80696bbe48053a955?rik=QVF4C9WzEN6APQ&riu=http%3a%2f%2f2.bp.blogspot.com%2f-VQH1XK41xg0%2fUMJcPL6vR6I%2fAAAAAAAAAqo%2fb4So6MzeFRk%2fs1600%2fgodofwar2.jpg&ehk=vKz77B08WjpOmHXbRcZXbPQln3mT7NN7OXjXTwqTfII%3d&risl=&pid=ImgRaw&r=0" alt="God of War II">
+                    <h3>God of War II</h3>
+                    <p>Plataforma: PlayStation 2</p>
+                    <p>Data de Lançamento: 2007</p>
+                </div>
+            </section>
+            
+            <div class="video-container">
+                <h1 class="branco">Assista ao trailer do jogo</h1>
+                <iframe id="trailerIframe" width="445" height="250" 
+                        src="https://www.youtube.com/embed/lPrNrmBWx9Y" 
+                        title="God of War II trailer"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="moldura">
+            <h1 class="branco">Imagens do jogo:</h1>
+            <div class="moldura">
+                <img id="imagemMoldura" src="https://brownar217.weebly.com/uploads/1/2/4/9/124907820/241118779.jpg" alt="Imagem da Moldura">
+            </div>
+            <button id="trocarImagem" class="btn-img">➡</button>
+        </section>
+
+        <div class="bloco-texto">
+            <h2 class="branco">História do jogo:</h2>
+            <p class="branco">Em 'God of War II', Kratos, o ex-Deus da Guerra, busca vingança contra os deuses do Olimpo após ter sido traído por Zeus. O jogo começa com Kratos liderando um exército contra os titãs, mas, ao ser atacado por Zeus, ele perde seus poderes e é lançado ao submundo.</p>
+        </div>
+
+        <button id="nextButton" class="btn-voltar">Next</button>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 PIXEL. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const imagensMoldura = [
+            "https://th.bing.com/th/id/R.16fbaebbae8321f2743f5dd0f1a8f8e8?rik=Ac1EUY87x5BKLg&pid=ImgRaw&r=0",
+            "https://image.winudf.com/v2/image/Y29tLnRpcHNzZWNyZXRzLmdvZG9md2FyMl9zY3JlZW5fMF8xNTIzMDc1MjUyXzA1NQ/screen-0.jpg?fakeurl=1&type=.jpg",
+            "https://i.ytimg.com/vi/bF2U0kjEE0k/maxresdefault.jpg"
+        ];
+
+        let imagemAtual = 0;
+
+        document.getElementById('trocarImagem').addEventListener('click', () => {
+            imagemAtual = (imagemAtual + 1) % imagensMoldura.length; // Loop pelas imagens
+            document.getElementById('imagemMoldura').src = imagensMoldura[imagemAtual];
+        });
+
+        const texts = [
+            {
+                title: "História do jogo:",
+                content: "Em 'God of War II', Kratos, o ex-Deus da Guerra, busca vingança contra os deuses do Olimpo após ter sido traído por Zeus. O jogo começa com Kratos liderando um exército contra os titãs, mas, ao ser atacado por Zeus, ele perde seus poderes e é lançado ao submundo."
+            },
+            {
+                title: "Personagens principais:",
+                content: "Kratos, Atena, Zeus e outras figuras mitológicas desempenham papéis cruciais na narrativa, cada um com sua própria motivação e conflito."
+            },
+            {
+                title: "Empresa:",
+                content: "Desenvolvido pela Santa Monica Studio, uma divisão da Sony Interactive Entertainment. Fundada em 1999, a Santa Monica Studio se destacou por seu foco em criar jogos de alta qualidade, especialmente para consoles PlayStation. O estúdio ganhou reconhecimento mundial com a franquia God of War, que estreou em 2005 e rapidamente se tornou um dos pilares da plataforma."
+            },
+        ];
+
+        let currentIndex = 0;
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % texts.length; // Loop pelos textos
+            document.querySelector('.bloco-texto h2').innerText = texts[currentIndex].title;
+            document.querySelector('.bloco-texto p').innerText = texts[currentIndex].content;
+
+            // Exibir o trailer se o índice atual for 0
+            if (currentIndex === 0) {
+                document.getElementById('trailerIframe').style.display = 'block';
+            } else {
+                document.getElementById('trailerIframe').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

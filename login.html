@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Loja PIXEL</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXEL - Sua plataforma de Jogos</title>
+    <style>
+        /* Estilo global para o corpo da página */
+        body {
+            background-image: url('https://th.bing.com/th/id/R.0657642822bede0c619ad864a892b54f?rik=gpaZunmUcm76Iw&pid=ImgRaw&r=0');
+            background-size: cover; /* A imagem de fundo cobre toda a tela */
+            background-position: center; /* A imagem é centralizada */
+            font-family: Arial, sans-serif; /* Define a fonte da página */
+            margin: 0; /* Remove as margens padrão */
+            padding: 0; /* Remove o padding */
+            height: 100vh; /* Define a altura como 100% da tela */
+        }
+
+        /* Estilo para o cabeçalho */
+        .header {
+            position: absolute; /* Fixa o cabeçalho na parte superior esquerda */
+            top: 20px; 
+            left: 20px;
+            color: white; /* Cor do texto do cabeçalho */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        .header h1 {
+            font-size: 48px; /* Tamanho do título principal */
+            margin: 0; /* Remove a margem */
+        }
+
+        .header h3 {
+            font-size: 18px; /* Tamanho da subtítulo */
+            margin-top: 5px; /* Margem superior */
+            color: #ddd; /* Cor do subtítulo */
+        }
+
+        /* Estilo para a classe 'vermelhod' */
+        .vermelhod {
+            color: #8b0000; /* Cor vermelha */
+        }
+
+        /* Estilo para a classe 'preto' */
+        .preto {
+            color: black; /* Cor preta */
+        }
+
+        /* Estilo do contêiner do formulário */
+        .form-container {
+            display: flex; /* Usando flexbox para alinhar o conteúdo */
+            justify-content: center; /* Alinha o formulário no centro horizontal */
+            align-items: center; /* Alinha o formulário no centro vertical */
+            height: 100vh; /* A altura ocupa toda a tela */
+        }
+
+        /* Estilo para o formulário de login */
+        .form-signin {
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+            padding: 40px 20px; /* Espaçamento interno */
+            border-radius: 30px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+
+        .form-signin h2 {
+            text-align: center; /* Alinha o título do formulário no centro */
+            margin-bottom: 20px; /* Margem inferior */
+            color: #333; /* Cor do texto */
+        }
+
+        /* Estilo para os campos de entrada do formulário */
+        .form-control {
+            width: 100%; /* Ocupa toda a largura disponível */
+            padding: 19px; /* Espaçamento interno */
+            margin: 15px 0; /* Espaçamento entre os campos */
+            font-size: 12px; /* Tamanho da fonte */
+            box-sizing: border-box; /* Inclui o padding na largura total */
+            border-radius: 10px; /* Bordas arredondadas */
+            border: 1px solid #ccc; /* Borda cinza clara */
+        }
+
+        /* Estilo para o botão */
+        .btn {
+            width: 100%; /* O botão ocupa toda a largura */
+            padding: 10px; /* Espaçamento interno */
+            background-color: #007BFF; /* Cor de fundo azul */
+            color: white; /* Cor do texto branco */
+            border: none; /* Remove a borda */
+            cursor: pointer; /* Exibe o cursor de ponteiro */
+            font-size: 18px; /* Tamanho da fonte */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        /* Estilo para o botão quando o mouse passa sobre ele */
+        .btn:hover {
+            background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho com o nome da plataforma e uma frase explicativa -->
+    <div class="header">
+        <h1>PI<span class="vermelhod">X</span>EL</h1> <!-- Nome da plataforma PIXEL, com "X" em vermelho -->
+        <h2><span class="white">Sua plataforma de jogos sempre oferecendo as melhores informações</span></h2> <!-- Frase explicativa -->
+    </div>
+
+    <!-- Formulário de login -->
+    <div class="form-container">
+        <div class="form-signin">
+            <h2>Faça seu login</h2> <!-- Título do formulário -->
+            <!-- Formulário com campos de entrada para nome de usuário e senha -->
+            <form id="loginForm">
+                <input type="text" class="form-control" name="username" placeholder="Nome de usuário" required autofocus /> <!-- Campo para nome de usuário -->
+                <input type="password" class="form-control" name="password" placeholder="Senha" required /> <!-- Campo para senha -->
+                <button type="submit" class="btn">Entrar</button> <!-- Botão para enviar o formulário -->
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Evento para o envio do formulário de login
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Obtém os valores dos campos de nome de usuário e senha
+            const username = this.username.value;
+            const password = this.password.value;
+
+            // Valida se os campos estão preenchidos
+            if (!username || !password) {
+                alert('Por favor, preencha todos os campos.'); // Alerta se algum campo estiver vazio
+                return;
+            }
+
+            // Simulação de autenticação: verifica se o nome de usuário e senha são corretos
+            if (username === "bruno" && password === "1234") {
+                window.location.href = 'home.html'; // Redireciona para a página home.html
+            } else {
+                alert('Nome de usuário ou senha incorretos. Tente novamente.'); // Exibe alerta se os dados estiverem incorretos
+            }
+        });
+
+        // Função para alternar a visibilidade da senha (não usada no código, mas pode ser útil)
+        function togglePasswordVisibility() {
+            const passwordField = document.querySelector('input[name="password"]');
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password'; // Altera o tipo do campo entre "password" e "text"
+            passwordField.setAttribute('type', type); // Aplica a alteração do tipo
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

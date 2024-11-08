@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>katana zero</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>god of war II - PIXEL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        header {
+            background-color: #ffcc00;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .bloco-texto {
+            border: 5px solid purple;
+            background-color: #7d043b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto; /* Adiciona margem automática para centralizar */
+            width: 420px; /* Mantém a largura definida */
+            text-align: center; /* Centraliza o texto dentro do bloco */
+        }
+
+        .box {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: -2px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            width: 420px; /* Ajuste a largura conforme necessário */
+            border: 10px solid #b4045c; /* Adiciona a borda com a cor desejada */
+        }
+
+        .box img {
+            width: 400px; /* Ajusta a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            display: block; /* Faz a imagem ocupar uma linha inteira */
+            margin: 0 auto; /* Centraliza a imagem horizontalmente */
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            margin-top: -350px; 
+            width: 100%;
+        }
+
+        #moldura {
+            width: 445px; /* Ajuste a largura conforme necessário */
+            display: flex;
+            flex-direction: column; /* Coloca a moldura e o botão em coluna */
+            align-items: flex-start; /* Alinha os itens à esquerda */
+            margin-top: 50px; /* Espaço acima da moldura */
+        }
+
+        .moldura {
+            position: relative; /* Permite que elementos filhos sejam posicionados absolutamente */
+            width: 455px;
+            height: 310px;
+            border: 5px solid purple; /* Moldura roxa */
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px; /* Espaço abaixo da moldura */
+        }
+
+        .btn-img {
+            height: 50px; 
+            padding: 0 20px; 
+            background-color: #7d043b; 
+            color: white; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background-color 0.3s; 
+        }
+
+        .btn-img:hover {
+            background-color: #9b0a47; /* Cor do botão ao passar o mouse */
+        }
+
+        .moldura img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .hero {
+            background-image: url("imagens/katana.jpg");
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: 40% -125%;
+        }
+
+        .vermelod {
+            color: #8b0000;
+        }
+
+        .branco {
+            color: white;
+        }
+
+        .produtos {
+            padding: 80px 20px;
+        }
+
+        .btn-voltar {
+            display: inline-block; 
+            text-align: center;
+            padding: 15px 30px; 
+            background-color: #7d043b; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background-color 0.3s; 
+            margin-top: 20px; 
+        }
+
+        .btn-voltar:hover {
+            background-color: #9b0a47;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            margin-top: -350px; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="home.html" style="text-decoration: none; color: inherit;">PI<span class="vermelhod">X</span>EL</a>
+            </div>
+            <ul class="nav-links">
+                <a href="login" style="text-decoration: none; color: inherit;">Sair da conta</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <h1 class="branco">Katana zero</h1>
+            <p class="branco">Um espadachin contratado pelo governo para matar alvos começa a questionar sua própria identidade e busca respostas</p>
+        </section>
+        
+        <a href="home.html" class="btn-voltar">Voltar</a>
+
+        <section id="produtos" class="produtos">
+            <h2 class="branco">Sobre o jogo</h2>
+            <p class="branco">Katana zero é o típico de jogo para deixar todos envolventes com sua história e criando perguntas a cada tempo que passa.</p>
+
+            <section id="box">
+                <div class="box">
+                    <img src="https://th.bing.com/th/id/OIP.0pGvgl63bf4DDJRMn_7u_gHaEn?rs=1&pid=ImgDetMain" alt="Katana zero">
+                    <h3>Katana zero</h3>
+                    <p>Plataforma: Pc/Xbox/Nintendo switch</p>
+                    <p>Data de Lançamento: 2019</p>
+                </div>
+            </section>
+            
+            <div class="video-container">
+                <h1 class="branco">Assista ao trailer do jogo</h1>
+               <iframe id="trailerIframe" width="445" height="250" 
+        src="https://www.youtube.com/embed/9TpUyq8Ms1I" 
+        title="katana zero trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+            </div>
+        </section>
+
+        <section id="moldura">
+            <h1 class="branco">Imagens do jogo:</h1>
+            <div class="moldura">
+                <img id="imagemMoldura" src="https://th.bing.com/th/id/OIP.TMCxV5I1EpeBZCisIMwxaAHaHa?rs=1&pid=ImgDetMain" alt="Imagem da Moldura">
+            </div>
+            <button id="trocarImagem" class="btn-img">➡</button>
+        </section>
+
+        <div class="bloco-texto">
+            <h2 class="branco">História do jogo:</h2>
+            <p class="branco">Enquanto cumpre suas missões, Dragão começa a questionar sua própria identidade e o verdadeiro propósito de seu trabalho, especialmente após interagir com um psicoterapeuta que o ajuda a lidar com seus traumas. Através de conversas com ele e outras figuras do jogo, o protagonista descobre que seu passado está ligado a uma conspiração maior envolvendo experimentos secretos e manipulação mental.</p>
+        </div>
+
+        <button id="nextButton" class="btn-voltar">Next</button>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 PIXEL. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const imagensMoldura = [
+            "https://th.bing.com/th/id/OIP.jEADec8LbG1dXNYWSQhFOAHaEK?rs=1&pid=ImgDetMain",
+            "https://d1lss44hh2trtw.cloudfront.net/assets/article/2019/04/18/katana-zero-11_feature.png",
+            "https://i0.wp.com/www.nintendo-insider.com/wp-content/uploads/2019/04/katana_zero_review_screenshot_2.jpg?resize=1000%2C563&ssl=1"
+        ];
+
+        let imagemAtual = 0;
+
+        document.getElementById('trocarImagem').addEventListener('click', () => {
+            imagemAtual = (imagemAtual + 1) % imagensMoldura.length; // Loop pelas imagens
+            document.getElementById('imagemMoldura').src = imagensMoldura[imagemAtual];
+        });
+
+        const texts = [
+            {
+                title: "História do jogo:",
+                content: "Enquanto cumpre suas missões, Dragão começa a questionar sua própria identidade e o verdadeiro propósito de seu trabalho, especialmente após interagir com um psicoterapeuta que o ajuda a lidar com seus traumas. Através de conversas com ele e outras figuras do jogo, o protagonista descobre que seu passado está ligado a uma conspiração maior envolvendo experimentos secretos e manipulação mental."
+            },
+            {
+                title: "Personagens principais:",
+                content: "Dragão, Psicoterapeuta, Viktor (V), O Coronel, Leon, Sr. Biquinho, Snow, Criança"
+            },
+            {
+                title: "Empresa:",
+                content: "A Askiisoft é uma desenvolvedora de jogos independente fundada por Justin Stander, que é o criador e diretor de Katana ZERO. A empresa é conhecida por seu estilo único de design de jogos, com foco em jogabilidade fluida, narrativa envolvente e estética pixelada. A Askiisoft ganhou notoriedade com o lançamento de Katana ZERO, mas antes disso, ela também havia trabalhado em outros projetos, como o jogo Zompiercer, que, embora menor em escala, ajudou a estabelecer a reputação do estúdio."
+            },
+        ];
+
+        let currentIndex = 0;
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % texts.length; // Loop pelos textos
+            document.querySelector('.bloco-texto h2').innerText = texts[currentIndex].title;
+            document.querySelector('.bloco-texto p').innerText = texts[currentIndex].content;
+
+            // Exibir o trailer se o índice atual for 0
+            if (currentIndex === 0) {
+                document.getElementById('trailerIframe').style.display = 'block';
+            } else {
+                document.getElementById('trailerIframe').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
